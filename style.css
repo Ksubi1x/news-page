@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    
+}
+
+.wrapper {
+    width: 100%;
+    
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    grid-area: header;
+    padding: 0px 0px 25px 0px;
+}
+
+.menu{
+    
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.menu a {
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: medium;
+    color: hsl(240, 100%, 5%)
+}
+
+.menu a:hover {
+    color: hsl(35, 77%, 62%);
+    cursor: pointer;
+}
+
+#pic1 {
+    width: 100%;
+}
+
+.header img {
+    height: 30px;
+    width: 50px;
+}
+
+.mainContent {
+    grid-area: main;
+}
+
+.picDetails {
+    margin: 15px 0px;
+    grid-area: details;
+    display: flex;
+    flex-direction: column;
+}
+
+.picDetails h1 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+}
+
+.picDetails p {
+    margin: 15px 0px;
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+
+.picDetails button {
+    margin: 15px 0px;
+    height: 40px;
+    width: 50%;
+    background-color: hsl(5, 85%, 63%);
+    outline: none;
+    border: none;
+    color: white;
+    letter-spacing: 5px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+}
+
+.picDetails button:hover {
+    background-color: black;
+    cursor: pointer;
+}
+
+.news {
+    
+    padding: 20px;
+    background-color: hsl(240, 100%, 5%);
+    grid-area: news;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.newsTitle {
+    color: hsl(35, 77%, 62%);
+    margin: 0px 0px 20px 0px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+}
+
+
+
+.news h4 {
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+}
+
+.news h4:hover {
+    color: hsl(35, 77%, 62%);
+    cursor: pointer;
+}
+
+.news p {
+    margin: 10px 0px 0px 0px;
+    padding: 0px 0px 10px 0px;
+    color: hsl(233, 8%, 79%);
+    font-family: 'Inter', sans-serif;
+    font-size: 15px
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    background-color: hsl(233, 8%, 79%);
+    margin: 25px 0px
+}
+
+.articles2 {
+    margin: 30px 0px;
+    grid-area: articles;
+    
+}
+
+.box {
+    margin: 25px 0px;
+    gap: 30px;
+    display: flex;
+    
+    
+}
+
+.info h2 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    color: hsl(233, 8%, 79%);
+}
+
+.info h4 {
+    
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+
+}
+
+.info h4:hover {
+    color: hsl(5, 85%, 63%);
+    cursor: pointer;
+}
+
+.info p {
+    font-family: 'Inter', sans-serif;
+    color: hsl(236, 13%, 42%);
+    font-size: 15px;
+    
+}
+
+#pictures {
+    height: 90px;
+    align-self: auto;
+}
+
+@media only screen and (min-width: 700px) {
+
+    
+    
+    #pic1 {
+        display: none;
+    }
+
+    #desktopPic {
+        
+        width: 90%;
+        
+    }
+
+    .wrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    .container {
+        padding: 30px;
+        width: 60%;
+        display: grid;
+        grid-template-areas:
+        "header header header"
+        "main main news"
+        "articles articles articles"
+        ;
+        grid-template-rows: 60px 1fr 25vh;
+        grid-template-columns: 1fr 1fr 1fr;
+
+    }
+
+    #hamburger {
+        display: none;
+    }
+
+    .menu {
+        display: contents;
+        display: flex;
+        
+    }
+
+    .articles2 {
+        display: flex;
+        
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .container {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    
+    .menu {
+        display: none;
+    }
+
+    #desktopPic {
+        display: none;
+        grid-area: picture;
+        
+    }
+    
+}
